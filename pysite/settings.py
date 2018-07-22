@@ -31,7 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'vectors.apps.VectorsConfig',
+    'latexify',
+    'mathvisualized.apps.MathVisualizedConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,7 +79,20 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'mathvisualized': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mathvisualized',
+        'USER': 'mathvisualized',
+        'PASSWORD': 'M4t1kk4',
+        'HOST': 'localhost',
+        'PORT': 3306,
     }
+}
+
+
+DATABASE_ROUTERS = {
+    'pysite.routers.GrandUnifiedRouter'
 }
 
 

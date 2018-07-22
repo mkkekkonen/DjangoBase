@@ -18,3 +18,5 @@ pysite.zip
 PySite.komodoproject
 vectors/
 piirisim/
+*.zip
+/mathvisualized/
